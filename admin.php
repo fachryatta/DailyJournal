@@ -45,7 +45,7 @@ if (!isset($_SESSION['username'])) {
 </head>
 <body>
     <!-- nav begin -->
-    <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top bg-dark-subtle">
+    <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top bg-danger-subtle">
     <div class="container">
         <a class="navbar-brand" target="_blank" href=".">My Daily Journal</a>
         <button
@@ -67,11 +67,18 @@ if (!isset($_SESSION['username'])) {
             <li class="nav-item">
                 <a class="nav-link" href="admin.php?page=article">Article</a>
             </li> 
+            <li class="nav-item">
+                <a class="nav-link" href="admin.php?page=gallery">Gallery</a>
+            </li> 
+            <li class="nav-item">
+                <a class="nav-link text-dark-subtle fw-bold" href="index.php">Homepage</a>
+            </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-dark fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-danger fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <?= $_SESSION['username']?>
                 </a>
                 <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="admin.php?page=profile">Profile</a></li>
                     <li><a class="dropdown-item" href="logout.php">Logout</a></li> 
                 </ul>
             </li> 
@@ -100,7 +107,7 @@ if (!isset($_SESSION['username'])) {
 </section>
 <!-- content end -->
     <!-- footer begin -->
-    <footer class="text-center p-5 bg-dark-subtle">
+    <footer class="text-center p-3 bg-danger-subtle">
     <div>
         <a href="https://www.instagram.com/udinusofficial"
         ><i class="bi bi-instagram h2 p-2 text-dark"></i
