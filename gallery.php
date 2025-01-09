@@ -70,7 +70,7 @@ $(document).ready(function(){
         })
     } 
 
-    $(document).on('click', '.halaman', function() {
+    $(document).on('click', '.halaman', function(e) {
     e.preventDefault();
     let hlm = $(this).attr('id'); // Ambil nomor halaman dari ID elemen
     load_data(hlm); // Panggil fungsi untuk memuat data sesuai halaman
